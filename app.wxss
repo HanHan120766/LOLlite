@@ -1,0 +1,35 @@
+/* reset */
+page {
+  background-color: #fff;
+}
+image {
+  display: block;
+}
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsislines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /*-webkit-line-clamp: 3;*/
+  overflow: hidden;
+}
+/*公用加载动画*/
+.common-loading {
+  position: fixed;
+  z-index: 999;
+  top: 500rpx;
+  left: 343rpx;
+  width: 64rpx;
+  height: 64rpx;
+}

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="headerView">
+    <view class="headerSearch">搜索</view>
+    <view class="headerTabView">
+      <view wx:for="{{tabInfo}}" class="{{item.color ? 'tabCell1' : 'tabCell2'}}" bindtap="onTabCell" data-id="{{item.id}}">{{item.name}}</view>
+    </view>
+  </view>
+  <scroll-view class="heros_list" scroll-y="true" style="height: {{herosListHeight}}px;">
+    <view class="hero_cell" wx:for="{{dataSource}}">
+      <image class="hero_img" src="{{'http://182.247.254.29/dlied1.qq.com/qqtalk/lolApp/img/hero/' + item.id + '.png'}}"></image>
+      <view class="hero_info">
+        <view class="hero_title">{{item.nick}}</view>
+        <view class="hero_name">{{item.name}}</view>
+        <view class="hero_content">{{item.tag1}}/{{item.tag2}}/{{item.tag3}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
